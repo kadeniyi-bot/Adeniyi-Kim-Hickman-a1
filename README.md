@@ -1,8 +1,8 @@
 # Assignment 1
 
 ## Group Members
-Kehinde Adeniyi
+* Kehinde Adeniyi
 
-Jaehoon "Jay" Kim
+* Jaehoon "Jay" Kim
 
-Ellen T Hickman
+* Ellen T Hickman
