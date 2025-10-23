@@ -240,7 +240,7 @@ word_freq
 
 most_used_words <- word_freq  %>%
   group_by(location) %>%
-  slice_max(n, n = 7) %>%
+  slice_max(n, n = 5) %>%
   ungroup()
 most_used_words
 
@@ -250,10 +250,11 @@ ggplot(most_used_words, aes(x = common_words, y = n)) +
   geom_col() +
   facet_wrap(~ location, scales = "free") +
   theme(axis.text.x = element_text(angle = 30, hjust = 2)) +
-  labs(title = "Top 7 Words by Location", x = "Common_Words", y = "Word_Counts")
+  labs(title = "Top 5 Words by Location", x = "Common_Words", y = "Word_Counts")
 
 ```
 
 **Answer**
 
-For Hyde Park, Chicago and Kenwood, the words Chicago and Hyde came up a lot. For the differences, words like home and city were not that frequent among them.
+The most common words are Park (n=74), Hyde (n=69), and Chicago (n=35).
+From the graph, the similarities between word at least one of the words Hyde, Park, and Chicago came up on the three locations. For the differences, the words south was only present in Hyde park, the word was only present in Kenwood and the homes and housing was only present in the Oakland graph.
