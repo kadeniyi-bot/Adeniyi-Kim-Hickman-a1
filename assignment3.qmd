@@ -11,6 +11,11 @@ editor: visual
 
 **KEHINDE O. ADENIYI**
 
+**GITHUB LINK**
+
+GitHub:<https://github.com/kadeniyi-bot/Adeniyi-Kim-Hickman-a1.git>
+
+
 You may work in pairs or individually for this assignment. Make sure you join a group in Canvas if you are working in pairs. Turn in this assignment as an HTML or PDF file to ELMS. Make sure to include the R Markdown or Quarto file that was used to generate it. Include the GitHub link for the repository containing these files.
 
 ```{r}
@@ -74,7 +79,7 @@ You will see that the table needs some additional formatting. Keep only want row
 
 ```{r}
 ## formatting to remove extra rows
-historical_pop <- historical_pop[2:10, -3]
+historical_pop <- historical_pop[1:10, -3]
 historical_pop
 ```
 
@@ -131,7 +136,7 @@ for (i in east_grand_boul_change) {
     
     
     if (ncol(hist_population) >= 2 && nrow(hist_population) >= 11) {
-      hist_population <- hist_population[2:10, -3] 
+      hist_population <- hist_population[1:10, -3] 
       
       # removing the underscores
       colnames(hist_population)[4] <- gsub("_", " ", i)
@@ -219,7 +224,7 @@ common_words
 
 **Answer**
 
-Some of the most common words used are community, Oakland, located, USA, South Chicago, Illinois, among others.
+Some of the most common words used are Oakland, located, South Chicago, Illinois.
 
 **Question**
 
@@ -235,7 +240,7 @@ word_freq
 
 most_used_words <- word_freq  %>%
   group_by(location) %>%
-  slice_max(n, n = 15) %>%
+  slice_max(n, n = 7) %>%
   ungroup()
 most_used_words
 
@@ -245,7 +250,7 @@ ggplot(most_used_words, aes(x = common_words, y = n)) +
   geom_col() +
   facet_wrap(~ location, scales = "free") +
   theme(axis.text.x = element_text(angle = 30, hjust = 2)) +
-  labs(title = "Top 15 Words by Location", x = "Common_Words", y = "Word_Counts")
+  labs(title = "Top 7 Words by Location", x = "Common_Words", y = "Word_Counts")
 
 ```
 
