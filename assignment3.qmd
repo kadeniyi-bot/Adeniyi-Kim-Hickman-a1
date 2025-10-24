@@ -255,6 +255,4 @@ ggplot(most_used_words, aes(x = common_words, y = n)) +
 ```
 
 **Answer**
-
-The most common words are Park (n=74), Hyde (n=69), and Chicago (n=35).
-From the graph, the similarities between word at least one of the words Hyde, Park, and Chicago came up on the three locations. For the differences, the words south was only present in Hyde park, the word was only present in Kenwood and the homes and housing was only present in the Oakland graph.
+The most common words are Park (n = 74), Hyde (n = 69), and Chicago (n = 35). From the graph, at least one of the words Hyde, Park, or Chicago appears in all three locations. For the differences, the word south was only present in Hyde Park, was was only present in Kenwood, and homes and housing were only present in the Oakland graph.
